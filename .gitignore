@@ -9,3 +9,5 @@
 /FizzBuzz.Tests/bin
 /FizzBuzz/FizzBuzz.csproj
 /packages
+/FizzBuzzConsole/obj
+/FizzBuzzConsole/bin

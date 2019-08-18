@@ -6,6 +6,11 @@ namespace FizzBuzz
     {
         public string Run(int input)
         {
+            if (input <= 0)
+            {
+                return string.Empty;
+            }
+
             var result = new StringBuilder();
             if (ByThree(input))
             {

@@ -6,6 +6,15 @@ namespace FizzBuzz.Tests
     public class FizzBuzzTests
     {
         [TestMethod]
+        public void GivenInputIsZero_WhenRunningLogic_ThenReturnEmptyString()
+        {
+            var input = 0;
+            var logic = new Logic();
+            var output = logic.Run(input);
+            Assert.AreEqual(string.Empty, output);
+        }
+
+        [TestMethod]
         [DataTestMethod]
         [DataRow(3, "Fizz")]
         [DataRow(6, "Fizz")]
@@ -16,7 +25,7 @@ namespace FizzBuzz.Tests
         [DataRow(24, "Fizz")]
         [DataRow(27, "Fizz")]
         [DataRow(33, "Fizz")]
-        public void GivenInputIsDivisibleByThree_WhenNotAlsoDivisibleByFive_ThenPrintFizz(int input, string expectedOutput)
+        public void GivenInputIsDivisibleByThree_WhenNotAlsoDivisibleByFive_ThenReturnFizz(int input, string expectedOutput)
         {
             var logic = new Logic();
             var output = logic.Run(input);
@@ -34,7 +43,7 @@ namespace FizzBuzz.Tests
         [DataRow(50, "Buzz")]
         [DataRow(55, "Buzz")]
         [DataRow(65, "Buzz")]
-        public void GivenInputIsDivisibleByFive_WhenNotAlsoDivisibleByThree_ThenPrintBuzz(int input, string expectedOutput)
+        public void GivenInputIsDivisibleByFive_WhenNotAlsoDivisibleByThree_ThenReturnBuzz(int input, string expectedOutput)
         {
             var logic = new Logic();
             var output = logic.Run(input);
@@ -48,7 +57,7 @@ namespace FizzBuzz.Tests
         [DataRow(45, "FizzBuzz")]
         [DataRow(60, "FizzBuzz")]
         [DataRow(90, "FizzBuzz")]
-        public void GivenInputIsDivisibleByThree_WhenAlsoDivisibleByFive_ThenPrintFizzBuzz(int input, string expectedOutput)
+        public void GivenInputIsDivisibleByThree_WhenAlsoDivisibleByFive_ThenReturnFizzBuzz(int input, string expectedOutput)
         {
             var logic = new Logic();
             var output = logic.Run(input);
