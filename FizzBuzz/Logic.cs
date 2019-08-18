@@ -1,22 +1,27 @@
-﻿namespace FizzBuzz
+﻿using System.Text;
+
+namespace FizzBuzz
 {
     public class Logic
     {
         public string Run(int input)
         {
-            if (input % 3 == 0 && input % 5 == 0)
+            var result = new StringBuilder();
+            if (ByThree(input))
             {
-                return "FizzBuzz";
+                result.Append("Fizz");
             }
-            if (input % 3 == 0)
+            if (ByFive(input))
             {
-                return "Fizz";
+                result.Append("Buzz");
             }
-            if (input % 5 == 0)
-            {
-                return "Buzz";
-            }
-            return string.Empty;
+            return result.ToString();
         }
+
+        private bool ByThree(int input) => ByValue(input, 3);
+
+        private bool ByFive(int input) => ByValue(input, 5);
+
+        private bool ByValue(int input, int value) => input % value == 0;
     }
 }
