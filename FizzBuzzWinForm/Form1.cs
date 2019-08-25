@@ -15,11 +15,12 @@ namespace FizzBuzzWinForm
         {
             var logic = new Logic();
             var sb = new StringBuilder();
+            var outputWinform = new OutputWinform(OutputTextBox);
             for (int i = 0; i <= InputNumSpinner.Value; ++i)
             {
                 var output = logic.Run(i);
                 sb.AppendLine($"{i}: {output}");
-                OutputTextBox.Text = sb.ToString();
+                outputWinform.Output(sb.ToString());
             }
         }
     }
