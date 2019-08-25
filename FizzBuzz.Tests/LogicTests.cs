@@ -3,7 +3,7 @@
 namespace FizzBuzz.Tests
 {
     [TestClass]
-    public class FizzBuzzTests
+    public class LogicTests
     {
         [TestMethod]
         public void GivenInputIsZero_WhenRunningLogic_ThenReturnEmptyString()
