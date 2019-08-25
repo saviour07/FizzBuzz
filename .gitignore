@@ -3,13 +3,6 @@
 ################################################################################
 
 /.vs
-/FizzBuzz/obj
-/FizzBuzz/bin
-/FizzBuzz.Tests/obj
-/FizzBuzz.Tests/bin
-/FizzBuzz/FizzBuzz.csproj
+/**/bin
+/**/obj
 /packages
-/FizzBuzzConsole/obj
-/FizzBuzzConsole/bin
-/FizzBuzzWinForm/bin
-/FizzBuzzWinForm/obj
